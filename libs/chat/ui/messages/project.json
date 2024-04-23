@@ -1,0 +1,23 @@
+{
+  "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "library",
+  "sourceRoot": "libs/chat/ui/messages/src",
+  "prefix": "banshop",
+  "targets": {
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/chat/ui/messages"],
+      "options": {
+        "jestConfig": "libs/chat/ui/messages/jest.config.ts",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": ["libs/chat/ui/messages/src/**/*.ts", "libs/chat/ui/messages/src/**/*.html"]
+      }
+    }
+  },
+  "tags": []
+}

@@ -1,0 +1,23 @@
+{
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "library",
+  "sourceRoot": "libs/ui/multiplatform/src",
+  "prefix": "banshop",
+  "targets": {
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/ui/multiplatform"],
+      "options": {
+        "jestConfig": "libs/ui/multiplatform/jest.config.ts",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": ["libs/ui/multiplatform/src/**/*.ts", "libs/ui/multiplatform/src/**/*.html"]
+      }
+    }
+  },
+  "tags": []
+}
